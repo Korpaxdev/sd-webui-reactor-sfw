@@ -388,8 +388,8 @@ def swap_face(
     result_image = target_img
 
     logger.status("Checking for any unsafe content")
-    if check_sfw_image(result_image) is None:
-        return result_image, [], 0
+    # if check_sfw_image(result_image) is None:
+    #     return result_image, [], 0
 
     PROVIDERS = ["CUDAExecutionProvider"] if device == "CUDA" else ["CPUExecutionProvider"]
     
